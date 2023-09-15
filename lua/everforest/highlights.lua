@@ -1104,9 +1104,19 @@ highlights.generate_syntax = function(palette, options)
 
     -- nvim-telescope/telescope.nvim
     TelescopeMatching = syntax_entry(palette.green, palette.none, { styles.bold }),
-    TelescopeBorder = { link = "Grey" },
-    TelescopePromptPrefix = { link = "Orange" },
-    TelescopeSelection = { link = "DiffAdd" },
+    TelescopePromptCounter = { fg = palette.grey1 },
+    TelescopeNormal = { bg = palette.bg_dim },
+    TelescopePreviewBorder = { fg = palette.bg_dim, bg = palette.bg_dim },
+    TelescopePreviewNormal = { bg = palette.bg_dim },
+    TelescopePreviewTitle = { fg = palette.bg_dim, bg = palette.aqua },
+    TelescopePromptBorder = { fg = palette.bg1, bg = palette.bg1 },
+    TelescopePromptNormal = { fg = palette.fg, bg = palette.bg1 },
+    TelescopePromptPrefix = { fg = palette.orange, bg = palette.bg1 },
+    TelescopePromptTitle = { fg = palette.bg_dim, bg = palette.orange },
+    TelescopeResultsBorder = { fg = palette.bg_dim, bg = palette.bg_dim },
+    TelescopeResultsNormal = { bg = palette.bg_dim },
+    TelescopeResultsTitle = { fg = palette.bg_dim, bg = palette.bg_dim },
+    TelescopeSelection = { bg = palette.bg1 },
 
     -- lewis6991/gitsigns.nvim
     GitSignsAdd = { link = "GreenSign" },
