@@ -126,10 +126,11 @@ highlights.generate_syntax = function(palette, options)
     CursorLine = syntax_entry(palette.none, palette.bg1),
     CursorColumn = syntax_entry(palette.none, palette.bg1),
     LineNr = syntax_entry(set_colour_based_on_ui_contrast(palette.bg5, palette.grey0), palette.none),
-    CursorLineNr = syntax_entry(
-      set_colour_based_on_ui_contrast(palette.grey1, palette.grey2),
-      sign_column_respecting_colour(palette.bg1)
-    ),
+    -- CursorLineNr = syntax_entry(
+    --   set_colour_based_on_ui_contrast(palette.grey1, palette.grey2),
+    --   sign_column_respecting_colour(palette.bg1)
+    -- ),
+    CursorLineNr = syntax_entry(palette.fg, sign_column_respecting_colour(palette.bg1)),
 
     DiffAdd = syntax_entry(palette.none, palette.bg_green),
     DiffChange = syntax_entry(palette.none, palette.bg_blue),
@@ -294,7 +295,7 @@ highlights.generate_syntax = function(palette, options)
     Macro = syntax_entry(palette.aqua, palette.none),
     Identifier = syntax_entry(palette.blue, palette.none),
 
-    Comment = syntax_entry(palette.grey1, palette.none, comment_italics),
+    Comment = syntax_entry(palette.bg5, palette.none, comment_italics),
     SpecialComment = syntax_entry(palette.grey1, palette.none, comment_italics),
     Todo = syntax_entry(palette.purple, palette.none, comment_italics),
 
@@ -1147,11 +1148,8 @@ highlights.generate_syntax = function(palette, options)
     LeapBackdrop = syntax_entry(palette.grey1, palette.none),
 
     -- lukas-reineke/indent-blankline.nvim
-    IndentBlanklineContextChar = syntax_entry(palette.grey1, palette.none, { styles.nocombine }),
-    IndentBlanklineContextStart = syntax_entry(palette.none, palette.bg2),
-    IndentBlanklineChar = syntax_entry(palette.bg5, palette.none, { styles.nocombine }),
-    IndentBlanklineSpaceChar = { link = "IndentBlanklineChar" },
-    IndentBlanklineSpaceCharBlankline = { link = "IndentBlanklineChar" },
+    IndentBlanklineChar = { fg = palette.bg2 },
+    IndentBlanklineContextChar = { fg = palette.bg5 },
 
     -- romgrk/barbar.nvim
     BufferCurrent = syntax_entry(palette.fg, palette.bg0),
