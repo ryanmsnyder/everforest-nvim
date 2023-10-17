@@ -1148,8 +1148,8 @@ highlights.generate_syntax = function(palette, options)
     LeapBackdrop = syntax_entry(palette.grey1, palette.none),
 
     -- lukas-reineke/indent-blankline.nvim
-    IndentBlanklineChar = { fg = palette.bg2 },
-    IndentBlanklineContextChar = { fg = palette.bg5 },
+    IblIndent = { fg = palette.bg2 },
+    IblScope = { fg = palette.bg5 },
 
     -- romgrk/barbar.nvim
     BufferCurrent = syntax_entry(palette.fg, palette.bg0),
@@ -1454,6 +1454,7 @@ highlights.generate_syntax = function(palette, options)
     NeoTreeNormalNC = { link = "NeoTreeNormal" },
     NeoTreeSignColumn = { link = "NeoTreeNormal" },
     NeoTreeRootName = { link = "Title" },
+    NeoTreeWinSeparator = { fg = palette.bg_dim, bg = palette.bg_dim },
 
     -- https://github.com/lambdalisue/fern.vim
     FernMarkedLine = { link = "Purple" },
