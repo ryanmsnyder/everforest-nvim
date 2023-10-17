@@ -1104,8 +1104,8 @@ highlights.generate_syntax = function(palette, options)
     TroubleCode = { link = "Grey" },
 
     -- nvim-telescope/telescope.nvim
-    TelescopeMatching = syntax_entry(palette.green, palette.none, { styles.bold }),
-    TelescopePromptCounter = { fg = palette.grey1 },
+    TelescopeMatching = { fg = palette.orange },
+    TelescopePromptCounter = { fg = "#424A50" },
     TelescopeNormal = { bg = palette.bg_dim },
     TelescopePreviewBorder = { fg = palette.bg_dim, bg = palette.bg_dim },
     TelescopePreviewNormal = { bg = palette.bg_dim },
@@ -1113,7 +1113,7 @@ highlights.generate_syntax = function(palette, options)
     TelescopePromptBorder = { fg = palette.bg1, bg = palette.bg1 },
     TelescopePromptNormal = { fg = palette.fg, bg = palette.bg1 },
     TelescopePromptPrefix = { fg = palette.orange, bg = palette.bg1 },
-    TelescopePromptTitle = { fg = palette.bg_dim, bg = palette.orange },
+    TelescopePromptTitle = { fg = palette.bg_dim, bg = palette.red },
     TelescopeResultsBorder = { fg = palette.bg_dim, bg = palette.bg_dim },
     TelescopeResultsNormal = { bg = palette.bg_dim },
     TelescopeResultsTitle = { fg = palette.bg_dim, bg = palette.bg_dim },
